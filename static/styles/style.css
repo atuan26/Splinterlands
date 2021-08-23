@@ -1,0 +1,367 @@
+
+element.style {
+    min-height: 630px;
+}
+.collection-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    
+}
+.collection-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+* {
+    box-sizing: border-box;
+}
+user agent stylesheet
+div {
+    display: block;
+}
+.card-collection {
+    text-align: center;
+    padding-top: 170px;
+}
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eee;
+}
+.jumbotron {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    color: inherit;
+    background-color: #eee;
+}
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+html {
+    font-size: 10px;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+html {
+    font-family: sans-serif;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+:after, :before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #a76700;
+}
+::-webkit-scrollbar-track {
+    background: #533300;
+}
+
+.card {
+    width: 200px;
+    margin: 10px 5px;
+    height: 280px;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+card.starter img.card-img, .card.starter .card-stats-container {
+    opacity: .7;
+}
+.card-img {
+    width: 200px;
+    height: 280px;
+    box-shadow: 0 0 10px black;
+}
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+
+.card.beta .card-level {
+    top: -62px;
+    left: 20px;
+    width: 160px;
+    border-radius: 3px;
+    background-color: black;
+}
+
+.card-level {
+    position: absolute;
+    top: -73px;
+    background-color: #4a4a4a;
+    width: 162px;
+    left: 19px;
+    height: 6px;
+}
+.relative-position {
+    position: relative;
+    height: 0;
+    width: 0;
+}
+
+.stat-mana {
+    position: absolute;
+    top: -280px;
+}
+.stat-mana img {
+    height: 50px;
+}
+
+.stat-text-mana {
+    position: absolute;
+    top: 4px;
+    width: 46px;
+    text-align: center;
+    color: white;
+    font-size: 3rem;
+    font-family: nanami-heavy;
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: 2px 2px black;
+}
+
+.stat-speed {
+    position: absolute;
+    top: -152px;
+    left: -6px;
+}
+
+.stat-speed img {
+    height: 43px;
+}
+
+.stat-health {
+    position: absolute;
+    top: -152px;
+    left: 157px;
+}
+
+.card.beta .abilities, .card_back.beta .abilities {
+    top: -55px;
+}
+.abilities {
+    position: absolute;
+    top: -69px;
+    left: 19px;
+    width: 162px;
+    height: 54px;
+    padding-top: 5px;
+}
+ 
+.card.beta .card-name, .details-card.beta .card-name, .card_back.beta .card-name {
+    background: transparent;
+}
+
+.red {
+    color: #ff8484;
+}
+
+.card-name {
+    position: absolute;
+    width: 162px;
+    left: 19px;
+    top: -97px;
+    height: 25px;
+}
+
+.beta .card-name-text {
+    top: -91px;
+}
+.card-name-text {
+    font-family: ruba;
+    display: grid;
+    grid-template-columns: 80% 20%;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    left: 19px;
+    width: 162px;
+    height: 25px;
+    padding: 0 5px;
+    text-shadow: 2px 2px 3px black;
+}
+
+.card-qty {
+    position: absolute;
+    height: 33px;
+    width: 35px;
+    top: -282px;
+    left: 144px;
+}
+.stat-speed .stat-text {
+    left: 2px;
+    top: 4px;
+}
+
+.stat-text {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    color: white;
+    font-size: 27px;
+    width: 30px;
+    text-align: center;
+    font-family: nanami-heavy;
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: 2px 2px black;
+}
+
+.stat-magic img, .stat-ranged img, .stat-attack img, .stat-armor img, .stat-health img {
+    height: 52px;
+}
+
+.card .abilities img, .details-card .abilities img {
+    transition: transform .25s ease-in-out;
+}
+.abilities img {
+    width: 40px;
+}
+.stat-attack {
+    position: absolute;
+    top: -199px;
+    left: -11px;
+}
+.stat-magic img, .stat-ranged img, .stat-attack img, .stat-armor img, .stat-health img {
+    height: 52px;
+}
+.stat-text {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    color: white;
+    font-size: 27px;
+    width: 30px;
+    text-align: center;
+    font-family: nanami-heavy;
+    -webkit-text-stroke: 1.5px black;
+    text-shadow: 2px 2px black;
+}
+
+.card.beta .abilities, .card_back.beta .abilities {
+    top: -55px;
+}
+.abilities {
+    position: absolute;
+    top: -69px;
+    left: 19px;
+    width: 162px;
+    height: 54px;
+    padding-top: 5px;
+}
+.stat-armor {
+    position: absolute;
+    top: -199px;
+    left: 157px;
+}
+.stat-magic img, .stat-ranged img, .stat-attack img, .stat-armor img, .stat-health img {
+    height: 52px;
+}
+
+.stat-ranged {
+    position: absolute;
+    top: -199px;
+    left: -11px;
+}
+
+.stat-magic img, .stat-ranged img, .stat-attack img, .stat-armor img, .stat-health img {
+    height: 52px;
+}
+.stat-magic {
+    position: absolute;
+    top: -199px;
+    left: -11px;
+}
+.card.beta .summoner-stats, .card_back.beta .summoner-stats {
+    top: -58px;
+}
+.stat-magic-summoner, .stat-ranged-summoner, .stat-attack-summoner, .stat-armor-summoner, .stat-health-summoner, .stat-speed-summoner {
+    margin: 0 5px;
+}
+.stat-magic-summoner img, .stat-ranged-summoner img, .stat-attack-summoner img, .stat-armor-summoner img, .stat-health-summoner img {
+    height: 52px;
+}
+.summoner-stats img.ability {
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    text-align: center;
+    padding-top: 170px;
+}
+.ability{
+    text-align: center;
+    padding-top: 170px;
+ } 
+.summoner-stats {
+    position: absolute;
+    top: -69px;
+    display: flex;
+    width: 163px;
+    left: 19px;
+    justify-content: center;
+}
+.summoner-stats .stat-text {
+    position: relative;
+    top: -44px;
+    left: 1px;
+}
+
+.allcard{
+    position: absolute;
+    top: 150px;
+}
+
+header{
+    display: flex;
+}
+
+.filter{
+    display: flex;
+    position: absolute;
+    text-align: center;
+    height: 100px;
+    width: 90%;padding: 0;
+    position: fixed;
+    background-color: rgb(25 2 0 / 0.5);
+    z-index: 1;
+    border-radius: 5px;
+    justify-content: space-between;
+}
+
+.role{
+    position: relative;
+    top: 40px;
+    left: 100px;
+}
+.splinter{
+    position: relative;
+    top: 40px;
+    left: 250px;
+    display: block;    
+}
+.load {
+    position: relative;
+    top: 60%;
+    left: -55%;
+}
+.card-name-name {
+    text-align: left;
+}
