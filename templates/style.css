@@ -561,4 +561,28 @@ th{
     align-items: center;
     flex-wrap: nowrap;
     flex-direction: row;
+    position: relative;
 }
+
+.card_img_overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+    display: flex;
+    z-index: 2;
+  }
+
+  .filled:hover .card_img_overlay {
+    opacity: 0.8;
+  }
+  i{
+      margin: auto;
+      font-size: larger;
+  }
