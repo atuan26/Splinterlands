@@ -325,6 +325,7 @@ img {
 .allcard{
     position: absolute;
     top: 150px;
+    margin-left: 170px;
 }
 
 header{
@@ -441,6 +442,8 @@ header{
 
 .requirement{
     position: absolute;
+    display: flex;
+    flex-direction: column;
 }
 #add_new_btn{
     position: relative;
@@ -452,14 +455,15 @@ header{
 
 /* MODAL */
 .modal{
-    position: absolute;
+    z-index: 1;
     top: 0;
     left: 0;
-    bottom: 0;
-    right: 0;
     width: 100%;
     height: 100%;
     display: none;
+    position: fixed;
+    overflow-x: hidden;
+    transition: 0.5s; 
 }
 
 .modal__overlay{
@@ -473,7 +477,7 @@ header{
     z-index: 3;
     width: 900px;
     height: 500px;
-    border: saddlebrown solid 2px;
+    border: rgb(190, 112, 57) solid 2px;
     border-radius: 5px;
     top: 0;
     background-color: #b8e6e6;
@@ -482,21 +486,32 @@ header{
     width: 75%;
     left: 50%;
     margin-left: -37.5%;
-    height: 75%;
-    top: -50%;
+    max-height: 75%;
+    top: -25%;
     margin-top: 30%;
 }
-
+tr:hover {
+    background-color: #ddd;}
 table{
     width: 100%;
     border: 1px solid black;
+    overflow: auto;
+    border-collapse: collapse;
+    
 }
-td th{
+td{
     text-align: center;
     border-collapse: collapse;
-    border: 1px solid black;
+    border: 1px solid rgb(211, 62, 62);
+    padding: 8px;
 }
-
+th{
+    padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #33c1da;
+  color: rgb(223, 74, 74);
+}
 .imgcardcontainer{
     width:80px;
     height: 50px;
@@ -528,6 +543,14 @@ td th{
     position: absolute;
     right: 2px;
     background-color: rgba(13, 218, 236, 0.44);
+}
+.manacost_input{
+    max-width: 60px;
+    margin: 0 auto;
+}
+ select{
+    max-width: 80px;
+    margin: 0 auto;
 }
 .card-nameStrategy{
     margin: 5px;
