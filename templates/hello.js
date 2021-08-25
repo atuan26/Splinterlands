@@ -111,7 +111,7 @@ window.onload = function(){
             // console.log(urlImg, manaCost, cardName)
             emptyCardMonster.classList.remove('empty')
             emptyCardMonster.classList.add('filled')
-            emptyCardMonster.querySelector('.imgcardcontainer > img').setAttribute('src', urlImgMonstergit)
+            emptyCardMonster.querySelector('.imgcardcontainer > img').setAttribute('src', urlImgMonster)
             emptyCardMonster.querySelector('.card-nameStrategy').innerText = cardNameMonster
             emptyCardMonster.querySelector('.manacostStrategy').innerText = manaCostMonster
             emptyCardMonster.id = idCard
