@@ -60,7 +60,7 @@ window.onload = function(){
                         nameList.push(mon.querySelector('.card-nameStrategy').innerText)
                         manaList.push(mon.querySelector('.manacostStrategy').innerText)
                         // console.log(mon.querySelector('.card-nameStrategy').innerText, mon.querySelector('.manacostStrategy').innerText )
-
+// add cmt
                     });
                     var table = document.getElementById("table");
                     var row = table.insertRow(table.rows.length);
