@@ -73,8 +73,8 @@ window.onload = function(){
                     cell2.innerHTML = manaList.reduce((a, b) => parseInt(a) + parseInt(b))  + "/"+ document.querySelector(".manacost_input").value
                     cell3.innerHTML = document.querySelector('.ruleset-select').querySelector('select').value;
                     cell4.innerHTML = getSplinterType(idCard);
-                    cell5.innerHTML = cardName
                     cell5.appendChild(img);
+                    cell5.innerHTML += `<br>` + cardName
                     cell6.innerHTML = ";"
                     cell7.innerHTML = ";"
                     cell6.style.display =  'flex';
@@ -84,6 +84,7 @@ window.onload = function(){
         }
 
     }
+
     document.querySelector(".modal__overlay").onclick = function(){
         modal.style.display = 'none'
     }

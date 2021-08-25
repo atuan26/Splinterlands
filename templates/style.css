@@ -594,3 +594,8 @@ th{
     display: flex;
     /* justify-content: space-around; */
 }
+i{
+    font-size:xx-large;
+    margin: auto;
+    color: red;
+}
