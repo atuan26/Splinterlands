@@ -21,13 +21,7 @@ window.onload = function(){
     typeSplinter = document.querySelectorAll('.typeSplinter')
 
     function getSplinterType(splt){
-        // console.log(splt)
         Splinter.forEach(s => {
-            // eval(s).forEach(ss => {
-            //     if ((ss)==(splt)){
-            //         a = s
-            //     }
-            // })
             if (eval(s).includes(splt)){
                 a=  s
             }
@@ -46,6 +40,7 @@ window.onload = function(){
             // console.log(urlImg, manaCost, cardName)
             emptyCard.classList.remove('empty')
             emptyCard.querySelector('#summonerStrategy > img').setAttribute('src', urlImg)
+            emptyCard.querySelector('#summonerStrategy > img').setAttribute('alt', idCard)
             emptyCard.querySelector('.card-nameStrategy').innerText = cardName
             emptyCard.querySelector('.manacostStrategy').innerText = manaCost
             // emptyCard.id = idCard
@@ -60,10 +55,9 @@ window.onload = function(){
                         nameList.push(mon.querySelector('.card-nameStrategy').innerText)
                         manaList.push(mon.querySelector('.manacostStrategy').innerText)
                         // console.log(mon.querySelector('.card-nameStrategy').innerText, mon.querySelector('.manacostStrategy').innerText )
-// add cmt
                     });
-                    var table = document.getElementById("table");
-                    var row = table.insertRow(table.rows.length);
+                    var table = document.getElementById("tbody");
+                    var row = table.insertRow(-1);
                     var cell1 = row.insertCell(0);
                     var cell2 = row.insertCell(1);
                     var cell3 = row.insertCell(2);
@@ -71,13 +65,19 @@ window.onload = function(){
                     var cell5 = row.insertCell(4);
                     var cell6 = row.insertCell(5);
                     var cell7 = row.insertCell(6);
-                    cell1.innerHTML = table.rows.length -1 ;
+                    var img = document.createElement('img');
+                    img.src = urlImg;
+                    img.style.height = '40px'
+                    img.style.width = '40px'
+                    cell1.innerHTML = table.rows.length;
                     cell2.innerHTML = manaList.reduce((a, b) => parseInt(a) + parseInt(b))  + "/"+ document.querySelector(".manacost_input").value
                     cell3.innerHTML = document.querySelector('.ruleset-select').querySelector('select').value;
                     cell4.innerHTML = getSplinterType(idCard);
-                    cell5.innerHTML = ";"
+                    cell5.innerHTML = cardName
+                    cell5.appendChild(img);
                     cell6.innerHTML = ";"
                     cell7.innerHTML = ";"
+                    cell6.style.display =  'flex';
 
         }
     }
@@ -104,17 +104,17 @@ window.onload = function(){
 
     function addMonsterToStrategy(idCard){
         if (document.querySelectorAll('.empty')[0]){
-            emptyCard = document.querySelectorAll('.empty')[0]
-            urlImg = document.querySelector(`#${idCard}`).querySelector('img').getAttribute('src')
-            manaCost = document.querySelector(`#${idCard} > div > div:nth-child(2) > div.stat-mana > div`).innerText
-            cardName = document.querySelector(`#${idCard} > div > div:nth-child(3) > div.card-name-text > div.card-name-name`).innerText
+            emptyCardMonster = document.querySelectorAll('.empty')[0]
+            urlImgMonster = document.querySelector(`#${idCard}`).querySelector('img').getAttribute('src')
+            manaCostMonster = document.querySelector(`#${idCard} > div > div:nth-child(2) > div.stat-mana > div`).innerText
+            cardNameMonster = document.querySelector(`#${idCard} > div > div:nth-child(3) > div.card-name-text > div.card-name-name`).innerText
             // console.log(urlImg, manaCost, cardName)
-            emptyCard.classList.remove('empty')
-            emptyCard.classList.add('filled')
-            emptyCard.querySelector('.imgcardcontainer > img').setAttribute('src', urlImg)
-            emptyCard.querySelector('.card-nameStrategy').innerText = cardName
-            emptyCard.querySelector('.manacostStrategy').innerText = manaCost
-            emptyCard.id = idCard
+            emptyCardMonster.classList.remove('empty')
+            emptyCardMonster.classList.add('filled')
+            emptyCardMonster.querySelector('.imgcardcontainer > img').setAttribute('src', urlImgMonstergit)
+            emptyCardMonster.querySelector('.card-nameStrategy').innerText = cardNameMonster
+            emptyCardMonster.querySelector('.manacostStrategy').innerText = manaCostMonster
+            emptyCardMonster.id = idCard
         }
     }
 

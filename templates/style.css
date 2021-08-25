@@ -474,30 +474,38 @@ header{
     z-index: 3;
 }
 .table_data{
+    overflow-y: auto;
     z-index: 3;
     width: 900px;
     height: 500px;
     border: rgb(190, 112, 57) solid 2px;
     border-radius: 5px;
-    top: 0;
     background-color: #b8e6e6;
-    margin:auto;
     position: fixed;
-    width: 75%;
-    left: 50%;
-    margin-left: -37.5%;
+    max-width: 75%;
+    left: 12%;
     max-height: 75%;
-    top: -25%;
-    margin-top: 30%;
+    top: 12%;
+    overflow: hidden;
 }
+tr:nth-child(even){background-color: #f2f2f2}
 tr:hover {
     background-color: #ddd;}
-table{
-    width: 100%;
-    border: 1px solid black;
-    overflow: auto;
-    border-collapse: collapse;
     
+table{
+    position: relative;
+    width: 100%;
+    /* height: 100%; */
+    /* border: 1px solid black; */
+    /* overflow: auto; */
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    border: 1px solid #ddd;
+    overflow-y:scroll;
+}
+tr{
+    max-height: 40px;
 }
 td{
     text-align: center;
@@ -506,11 +514,11 @@ td{
     padding: 8px;
 }
 th{
-    padding-top: 12px;
-  padding-bottom: 12px;
-  text-align: left;
-  background-color: #33c1da;
-  color: rgb(223, 74, 74);
+    padding-top: 8px;
+    padding-bottom: 8px;
+    text-align: center;
+    background-color: #33c1da;
+    color: rgb(223, 74, 74);
 }
 .imgcardcontainer{
     width:80px;
@@ -582,7 +590,7 @@ th{
   .filled:hover .card_img_overlay {
     opacity: 0.8;
   }
-  i{
-      margin: auto;
-      font-size: larger;
-  }
+.card_icon{
+    display: flex;
+    /* justify-content: space-around; */
+}
