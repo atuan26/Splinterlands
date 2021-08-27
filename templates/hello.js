@@ -119,6 +119,23 @@ window.onload = function(){
         }
     }
 
+    removeCardBtn = document.querySelectorAll("i.remove_card_btn")
+    removeCardBtn.forEach(e => {
+        e.onclick = function removeCardFromQueue(){
+            e.parentElement.parentElement.remove()
+            var newCardE = document.createElement('span'); // is a node
+            newCardE.innerHTML =`<div class="card_container__monsterStrategy empty">
+            <div class="card_img_overlay"><i class="fas fa-times remove_card_btn"></i></div>
+            <div class="imgcardcontainer">
+              <img src="" alt="" class="cardimg">
+            </div>
+            <div class="card-nameStrategy"></div>
+            <div class="manacostStrategy"></div>
+          </div>`
+            document.getElementById('addS').appendChild(newCardE)
+        }
+    })
+
     Summoner.forEach(s =>{
         document.getElementById(s).onclick = function showMonster(){
             cardList.forEach(j =>{
