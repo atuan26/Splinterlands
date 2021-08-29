@@ -362,7 +362,8 @@ header{
     top: 25px;
     left: 250px;
     display: flex;    
-    background: linear-gradient(to right, rgb(223, 56, 35), rgb(174, 174, 180));
+    /* background: linear-gradient(to right, rgb(223, 56, 35), rgb(174, 174, 180)); */
+    background-image: linear-gradient(to right,rgb(240, 60, 47), rgb(48, 208, 230), rgb(37, 233, 37), rgb(253, 219, 219), rgb(140, 49, 214), yellow, white);
 }
 .load {
     display: inline-block;
