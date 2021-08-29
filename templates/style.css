@@ -595,7 +595,7 @@ th{
     display: flex;
     /* justify-content: space-around; */
 }
-i{
+i.remove_card_btn{
     font-size:xx-large;
     margin: auto;
     color: red;

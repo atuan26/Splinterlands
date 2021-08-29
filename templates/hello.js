@@ -119,6 +119,36 @@ window.onload = function(){
         }
     }
 
+    function removeCardFromQueue(ese){
+        console.log(ese)
+        console.log('parent: ' + ese.parentElement.parentElement.innerHTML)
+        let old = ese.parentElement.parentElement
+        old.remove()
+        var newCardE = document.createElement('div'); // is a node
+        newCardE.innerHTML =`
+        <div class="card_img_overlay"><i class="fas fa-times remove_card_btn"></i></div>
+        <div class="imgcardcontainer">
+          <img src="" alt="" class="cardimg">
+        </div>
+        <div class="card-nameStrategy"></div>
+        <div class="manacostStrategy"></div>
+        `
+        newCardE.classList.add('card_container__monsterStrategy')
+        newCardE.classList.add('empty')
+        document.getElementById('addS').appendChild(newCardE)
+        newCardE.querySelector('.card_img_overlay > I').onclick = function() {
+            removeCardFromQueue(newCardE.querySelector('.card_img_overlay > I'))
+        }
+            
+    }
+
+    removeCardBtn = document.querySelectorAll("i.remove_card_btn")
+    removeCardBtn.forEach(ese => {
+        ese.onclick = function() {
+            removeCardFromQueue(ese)
+        }
+    })
+
     Summoner.forEach(s =>{
         document.getElementById(s).onclick = function showMonster(){
             cardList.forEach(j =>{
